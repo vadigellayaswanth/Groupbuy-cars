@@ -1,4 +1,5 @@
 
+
 # GroupBuy Cars — AI Deal Coach for Collective Car Buying
 
 **Tagline:** More Buyers. More Bargaining Power. Better Decisions.  
@@ -178,3 +179,6 @@ A complete production PostgreSQL schema with Row Level Security is provided in `
 # group-by-cars
 
 
+
+# Groupbuy-cars
+GroupBuy Cars uses AI to help car buyers negotiate together, compare dealership offers, uncover hidden conditions, and identify genuine cash savings. It makes car buying simpler, smarter, and more transparent.
