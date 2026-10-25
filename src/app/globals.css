@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+:root {
+  /* Premium Obsidian & Graphite Luxury Palette */
+  --bg-obsidian: #05070a;
+  --bg-obsidian-elevated: #090d14;
+  --bg-card: rgba(14, 19, 28, 0.75);
+  --bg-card-hover: rgba(18, 25, 38, 0.88);
+  --bg-card-subtle: rgba(255, 255, 255, 0.025);
+
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-medium: rgba(255, 255, 255, 0.12);
+  --border-metallic: rgba(212, 175, 55, 0.25);
+  --border-cyan-glow: rgba(56, 189, 248, 0.3);
+
+  /* Metallic Silver & Restrained Champagne Accents */
+  --metallic-silver: #e2e8f0;
+  --metallic-titanium: #94a3b8;
+  --accent-champagne: #e6ca91;
+  --accent-champagne-subtle: rgba(230, 202, 145, 0.12);
+  --accent-cyan: #38bdf8;
+  --accent-cyan-subtle: rgba(56, 189, 248, 0.12);
+  --accent-emerald: #10b981;
+
+  --foreground: #f8fafc;
+  --foreground-muted: #94a3b8;
+  --foreground-dim: #64748b;
+}
+
+@theme inline {
+  --color-background: var(--bg-obsidian);
+  --color-foreground: var(--foreground);
+}
+
+body {
+  background-color: var(--bg-obsidian);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  letter-spacing: -0.011em;
+}
+
+/* Luxury Automotive Studio Background Lighting */
+.radial-automotive-bg {
+  background: 
+    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(56, 189, 248, 0.07) 0%, transparent 70%),
+    radial-gradient(circle 600px at 85% 20%, rgba(230, 202, 145, 0.04) 0%, transparent 60%),
+    radial-gradient(circle 500px at 15% 60%, rgba(56, 189, 248, 0.03) 0%, transparent 50%),
+    #05070a;
+}
+
+/* Precision Layered Glass Surfaces */
+.glass-panel {
+  background: rgba(11, 16, 24, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 1px 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 12px 32px -8px rgba(0, 0, 0, 0.65);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 
+    0 1px 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 20px 45px -12px rgba(0, 0, 0, 0.8),
+    0 0 25px -5px rgba(56, 189, 248, 0.1);
+}
+
+.glass-nav {
+  background: rgba(5, 7, 10, 0.82);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== FULL-WIDTH RESPONSIVE SITE CONTAINER =====
+   Uses ~94% of the available desktop viewport width (92–96% requirement)
+   with comfortable responsive padding and consistent navigation alignment.
+   Use: className="site-container"
+*/
+.site-container {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;   /* 16px mobile */
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .site-container {
+    max-width: 95%;
+    padding-left: 1.5rem; /* 24px tablet */
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-container {
+    max-width: 94%;
+    padding-left: 2rem;   /* 32px desktop */
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .site-container {
+    max-width: 94%;
+    padding-left: 2.5rem; /* 40px wide desktop */
+    padding-right: 2.5rem;
+  }
+}
+
+/* 3D Depth & Showroom Perspectives */
+.perspective-container {
+  perspective: 1200px;
+}
+
+.card-3d-tilt {
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.card-3d-tilt:hover {
+  transform: perspective(1200px) rotateX(2deg) rotateY(-1deg) translateY(-4px);
+}
+
+/* Refined Metallic and Specular Gradients */
+.text-gradient-silver {
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-champagne {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 30%, #e6ca91 75%, #b4914c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #ffffff 15%, #bae6fd 60%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-specular {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.border-specular::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  pointer-events: none;
+}
+
+/* Automotive Badges */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  letter-spacing: 0.025em;
+}
+
+/* Ambient Subtle Lighting */
+@keyframes ambient-glow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.04); }
+}
+
+.animate-ambient-glow {
+  animation: ambient-glow 7s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #05070a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+}
